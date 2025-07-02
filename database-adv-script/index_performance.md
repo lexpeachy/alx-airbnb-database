@@ -24,6 +24,8 @@ location (searching/filtering)
 price_range (filtering)
 
 property_type (filtering)
+
+SQL CREATE INDEX commands to create appropriate indexes for those columns and save them on database_index.sql
 -- Users table indexes
 CREATE INDEX idx_users_user_id ON users(user_id);
 CREATE INDEX idx_users_email ON users(email);
