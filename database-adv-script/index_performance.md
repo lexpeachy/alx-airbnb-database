@@ -1,3 +1,29 @@
+Users Table
+user_id (primary key, joins)
+
+email (WHERE clauses for authentication)
+
+last_name (search/sorting)
+
+Bookings Table
+booking_id (primary key)
+
+user_id (joins to users)
+
+property_id (joins to properties)
+
+booking_date (filtering and sorting)
+
+status (filtering)
+
+Properties Table
+property_id (primary key, joins)
+
+location (searching/filtering)
+
+price_range (filtering)
+
+property_type (filtering)
 -- Users table indexes
 CREATE INDEX idx_users_user_id ON users(user_id);
 CREATE INDEX idx_users_email ON users(email);
