@@ -1,0 +1,21 @@
+-- Users table indexes
+CREATE INDEX idx_users_user_id ON users(user_id);
+CREATE INDEX idx_users_email ON users(email);
+CREATE INDEX idx_users_last_name ON users(last_name);
+
+-- Bookings table indexes
+CREATE INDEX idx_bookings_booking_id ON bookings(booking_id);
+CREATE INDEX idx_bookings_user_id ON bookings(user_id);
+CREATE INDEX idx_bookings_property_id ON bookings(property_id);
+CREATE INDEX idx_bookings_booking_date ON bookings(booking_date);
+CREATE INDEX idx_bookings_status ON bookings(status);
+
+-- Properties table indexes
+CREATE INDEX idx_properties_property_id ON properties(property_id);
+CREATE INDEX idx_properties_location ON properties(location);
+CREATE INDEX idx_properties_price_range ON properties(price_range);
+CREATE INDEX idx_properties_property_type ON properties(property_type);
+
+-- Composite indexes for common query patterns
+CREATE INDEX idx_bookings_user_date ON bookings(user_id, booking_date);
+CREATE INDEX idx_properties_location_type ON properties(location, property_type);
